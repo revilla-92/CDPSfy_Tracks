@@ -36,7 +36,7 @@ app.use(landingRouter);
 var router = express.Router();
 
 router.route('/tracks')
-	.get(track_controller.findAllTracks)
+	//.get(track_controller.findAllTracks)
 	.post(track_controller.addTrack);
 
 router.route('/tracks/:name')
