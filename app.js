@@ -4,22 +4,23 @@ var express = require("express"),
     http     = require("http"),
     server   = http.createServer(app),
     methodOverride = require("method-override");
-    mongoose = require('mongoose');
+    //mongoose = require('mongoose');
 
 /* BASE DE DATOS */
+/*
 mongoose.connect('mongodb://localhost/tracks', function(err, res) {
 	if (err){
 		console.log('ERROR: conectando a la DB. '+err);
 	}else{
 		console.log('Conectado a la DB');
 	}
-});
+});*/
 
 app.use(bodyParser.urlencoded({ extended: false }));  
 app.use(bodyParser.json());  
 app.use(methodOverride());
 
-var models = require('./models/tracks')(app,mongoose);
+//var models = require('./models/tracks')(app,mongoose);
 var track_controller = require('./controllers/tracks_controller');
 
 

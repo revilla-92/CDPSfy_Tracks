@@ -1,18 +1,18 @@
-var mongoose = require('mongoose');  
-var Tracks  = mongoose.model('Track');
+//var mongoose = require('mongoose');  
+//var Tracks  = mongoose.model('Track');
 var fs = require('fs');
 
 
 
 //GET - Retorna todo el listado de canciones de la base de datos
-exports.findAllTracks = function(req, res) {
+/*exports.findAllTracks = function(req, res) {
     Tracks.find(function(err, tracks) {
     if(err) res.send(500, err.message);
     
     console.log('GET /tracks')
         res.status(200).jsonp(tracks);
     });
-};
+};*/
 
 //GET - Retorna una cancion por su nombre
 exports.findTrackByName = function(req, res){
