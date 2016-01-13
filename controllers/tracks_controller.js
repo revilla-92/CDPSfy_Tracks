@@ -8,18 +8,18 @@ exports.findTrackByName = function(req, res){
 
 	//recogemos el fichero con ese nombre dentro del NAS
     //PRODUCCION: var urlNAS = "../mnt/nas/";
-	var urlNAS = "./mnt/nas/";
+	var urlNAS = "../mnt/nas/";
 	var newURL = urlNAS+findURL;
 
 	//mando la cancion que se encuentra en esa ruta:
-	res.sendFile(findURL,{root: './mnt/nas'});
+	res.sendFile(findURL,{root: '../mnt/nas'});
 };
 
 
 //POST - Inserta una nueva cancion en la DB
 exports.addTrack = function(req, res){
     //PRODUCCION: var urlNAS = "../mnt/nas/";
-	var urlNAS = "./mnt/nas/";
+	var urlNAS = "../mnt/nas/";
 
 	if (req.method == 'POST') {
 		var fileName = '';
@@ -83,7 +83,7 @@ exports.addTrack = function(req, res){
 //DELETE - Borramos una cancion por su nombre
 exports.deleteTrackByName = function(req,res){
     //PRODUCCION: var urlNAS = "../mnt/nas/";
-	var urlNAS = "./mnt/nas/";
+	var urlNAS = "../mnt/nas/";
 	var findURL = req.params.name;
 	var newURL = urlNAS+findURL;
 
